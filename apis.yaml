@@ -1,0 +1,297 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: supermaket_api
+meta:
+  id: wrk_6bda1a2c3e04425a8da3001ca9c96988
+  created: 1767870566947
+  modified: 1767870566947
+  description: ""
+collection:
+  - url: http://127.0.0.1:8000/api/products/?format=json
+    name: get products bulk
+    meta:
+      id: req_e4a5a42d395b49a6adece5fde3c14527
+      created: 1767870651056
+      modified: 1767870779796
+      isPrivate: false
+      description: ""
+      sortKey: -1767870651056
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/products/B
+    name: get product by id
+    meta:
+      id: req_5f987946aa494325916ee2912aabb2d7
+      created: 1767870732165
+      modified: 1767897772321
+      isPrivate: false
+      description: ""
+      sortKey: -1767870732165
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/products/
+    name: create product
+    meta:
+      id: req_d030b7a41eb84aa293b505b0591f51ab
+      created: 1767870800385
+      modified: 1767897520125
+      isPrivate: false
+      description: ""
+      sortKey: -1767870800385
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "product_id": "G",
+            "name": "Gig",
+            "unit_price": 75.00,
+            "active": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/promotions/?format=json
+    name: get promotions bulk
+    meta:
+      id: req_1cf02f8fab9543559a7b4d98220d1deb
+      created: 1767870897552
+      modified: 1767896996028
+      isPrivate: false
+      description: ""
+      sortKey: -1765245555549.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/products/B/promotions/
+    name: get promotion of product id
+    meta:
+      id: req_d3cd4fba60484142b52958789343350e
+      created: 1767871148883
+      modified: 1767897796942
+      isPrivate: false
+      description: ""
+      sortKey: -1767870691610.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/promotions/5
+    name: get promotion by id
+    meta:
+      id: req_f87692d6dd7a419d9787387863d595e2
+      created: 1767871263181
+      modified: 1767897780324
+      isPrivate: false
+      description: ""
+      sortKey: -1767870711887.75
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/promotions/
+    name: create promotions
+    meta:
+      id: req_6ae9a3bd086c4d75b9628c309ed72ce4
+      created: 1767871313632
+      modified: 1767871350686
+      isPrivate: false
+      description: ""
+      sortKey: -1767870766275
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "product_id": "F",
+            "promotion_type": "bulk_discount",
+            "promotion_data": {
+                "quantity": 3,
+                "price": 13
+            },
+            "start_date": "2026-01-08T00:00:00Z",
+            "end_date": "2026-02-08T00:00:00Z",
+            "priority": 1,
+            "active": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/checkout/?format=json
+    name: get current cart
+    meta:
+      id: req_e106a6a887aa43659b23eba08e2f36c2
+      created: 1767871418694
+      modified: 1767871424176
+      isPrivate: false
+      description: ""
+      sortKey: -1762620460043
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/checkout/scan/?format=json
+    name: add item to cart
+    meta:
+      id: req_89e5ba0e3baa4cdebcca991aece3ecc6
+      created: 1767871458048
+      modified: 1767897691495
+      isPrivate: false
+      description: ""
+      sortKey: -1759995364536.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "product_id": "B"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/checkout/calculate/
+    name: calculate total
+    meta:
+      id: req_436047e6640e4edf94483cc5b65bb6b8
+      created: 1767871670341
+      modified: 1767871713911
+      isPrivate: false
+      description: ""
+      sortKey: -1749494982510.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b415d22cfdc048d4fb7cb14d89d9b91d40f708f0
+    created: 1767870566950
+    modified: 1767871426009
+  cookies:
+    - id: fdf28385-b076-425a-8197-6ffc44653e0d
+      key: sessionid
+      value: ytmpd4fgws8df2a8qrmgwswtlpm1szvc
+      domain: 127.0.0.1
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_b415d22cfdc048d4fb7cb14d89d9b91d40f708f0
+    created: 1767870566950
+    modified: 1767870566950
+    isPrivate: false
